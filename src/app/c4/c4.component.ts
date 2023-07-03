@@ -8,5 +8,5 @@ import { Component } from '@angular/core';
 export class C4Component {
 
   lista:string[]=["hola","que","tal","estas"];
-
+  item:string="";
 }
