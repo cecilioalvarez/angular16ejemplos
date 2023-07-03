@@ -1,5 +1,6 @@
 <p *ngFor="let item of lista">
     {{item}}
+    <input type="button" value="borrar" (click)="borrar(item)"/>
 </p>
-<input type="text" name="item" [(ngModel)]="item"/>
+<input type="text" name="item" [(ngModel)]="item"/><input type="button" value="nuevo" (click)="addItem()"/>
 {{item}}

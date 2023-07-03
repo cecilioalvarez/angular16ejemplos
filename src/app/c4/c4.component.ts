@@ -9,4 +9,15 @@ export class C4Component {
 
   lista:string[]=["hola","que","tal","estas"];
   item:string="";
+
+  addItem() {
+    this.lista.push(this.item);
+  }
+  
+  borrar(item:string) {
+    console.log(item);
+    var posicion:number=this.lista.indexOf(item);
+    this.lista.splice(posicion,1);
+
+  }
 }
