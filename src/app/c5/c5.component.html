@@ -1,0 +1,12 @@
+<table>
+
+    <tr *ngFor="let persona of lista">
+        <!--al ser una propiedad ya no de css puro sino de angular-->
+        <td [class]="color">{{persona.nombre}}</td>
+        <td [class]="'amarillo'">{{persona.apellidos}}</td>
+        <td [class]="persona.edad>20 ? 'azul' : 'rojo'">{{persona.edad}}</td>
+    </tr>
+</table>
+<input type="button" value="rojo" (click)="cambiarColor('rojo')"/>
+<input type="button" value="azul" (click)="cambiarColor('azul')"/>
+<input type="button" value="amarillo" (click)="cambiarColor('amarillo')"/>
