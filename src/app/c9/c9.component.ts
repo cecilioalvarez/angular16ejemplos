@@ -12,9 +12,16 @@ export class C9Component {
 
   lenguajeSeleccionado:string="";
 
+  lenguajesSeleccionados:string[]=[];
+
   cambiar(valor:string) {
 
     this.lenguajeSeleccionado=valor;
+  }
+
+  cambiar2(valor:string[]) {
+    console.log(valor);
+    this.lenguajesSeleccionados=valor;
   }
 
 }

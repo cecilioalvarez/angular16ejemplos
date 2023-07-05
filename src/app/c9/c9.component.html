@@ -3,3 +3,11 @@
     </mat-button-toggle>
   </mat-button-toggle-group>
   {{lenguajeSeleccionado}}
+
+<hr>
+
+  <mat-button-toggle-group multiple (change)="cambiar2($event.value)">
+    <mat-button-toggle *ngFor="let lenguaje of lenguajes" [value]="lenguaje"> {{lenguaje}}
+    </mat-button-toggle>
+  </mat-button-toggle-group>
+  {{lenguajesSeleccionados}}
