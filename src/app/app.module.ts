@@ -16,6 +16,8 @@ import {MatIconModule} from '@angular/material/icon';
 import { C8Component } from './c8/c8.component';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import { C9Component } from './c9/c9.component';
+import { C10Component } from './c10/c10.component';
+import {MatSelectModule} from '@angular/material/select';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +29,8 @@ import { C9Component } from './c9/c9.component';
     C6Component,
     C7Component,
     C8Component,
-    C9Component
+    C9Component,
+    C10Component
   ],
   imports: [
     BrowserModule,
@@ -35,7 +38,8 @@ import { C9Component } from './c9/c9.component';
     BrowserAnimationsModule,
     MatButtonModule,
     MatIconModule,
-    MatButtonToggleModule
+    MatButtonToggleModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]
