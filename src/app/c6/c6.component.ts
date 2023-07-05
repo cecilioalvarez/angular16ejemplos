@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class C6Component {
 
-  visible:boolean=true;
+  visible:boolean=false;
 
   ocultar() {
     this.visible=false;

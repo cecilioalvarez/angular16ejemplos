@@ -9,6 +9,9 @@ import { C4Component } from './c4/c4.component';
 import { FormsModule } from '@angular/forms';
 import { C5Component } from './c5/c5.component';
 import { C6Component } from './c6/c6.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { C7Component } from './c7/c7.component';
+import {MatButtonModule} from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -18,10 +21,11 @@ import { C6Component } from './c6/c6.component';
     C3Component,
     C4Component,
     C5Component,
-    C6Component
+    C6Component,
+    C7Component
   ],
   imports: [
-    BrowserModule,FormsModule
+    BrowserModule,FormsModule, BrowserAnimationsModule,MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
