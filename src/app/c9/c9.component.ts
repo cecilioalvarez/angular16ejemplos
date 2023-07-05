@@ -10,4 +10,11 @@ export class C9Component {
   lenguajes:string[]=["python","typescript",
   "javascript","C","ruby","kotlin"];
 
+  lenguajeSeleccionado:string="";
+
+  cambiar(valor:string) {
+
+    this.lenguajeSeleccionado=valor;
+  }
+
 }
