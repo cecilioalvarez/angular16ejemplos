@@ -13,6 +13,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { C7Component } from './c7/c7.component';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
+import { C8Component } from './c8/c8.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,10 +23,15 @@ import {MatIconModule} from '@angular/material/icon';
     C4Component,
     C5Component,
     C6Component,
-    C7Component
+    C7Component,
+    C8Component
   ],
   imports: [
-    BrowserModule,FormsModule, BrowserAnimationsModule,MatButtonModule,MatIconModule
+    BrowserModule,
+    FormsModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
