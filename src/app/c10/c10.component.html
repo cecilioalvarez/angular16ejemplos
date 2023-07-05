@@ -1,6 +1,11 @@
-
-<mat-select>
-    <mat-option *ngFor="let persona of personas" [value]="persona.nombre">
+<mat-form-field>
+    <mat-label>Personas</mat-label>
+<mat-select  (selectionChange)="seleccionar($event.value)">
+    <mat-option *ngFor="let persona of personas" [value]="persona">
       {{persona.nombre}}
     </mat-option>
   </mat-select>
+</mat-form-field>
+{{personaSeleccionada.nombre}}
+{{personaSeleccionada.apellidos}}
+{{personaSeleccionada.edad}}
