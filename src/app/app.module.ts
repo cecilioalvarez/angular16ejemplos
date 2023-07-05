@@ -14,6 +14,7 @@ import { C7Component } from './c7/c7.component';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import { C8Component } from './c8/c8.component';
+import {MatButtonToggleModule} from '@angular/material/button-toggle';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +32,8 @@ import { C8Component } from './c8/c8.component';
     FormsModule,
     BrowserAnimationsModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    MatButtonToggleModule
   ],
   providers: [],
   bootstrap: [AppComponent]
