@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import {MatListModule} from '@angular/material/list';
 import { AppComponent } from './app.component';
 import { C1Component } from './c1/c1.component';
 import { C2Component } from './c2/c2.component';
@@ -18,6 +18,7 @@ import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import { C9Component } from './c9/c9.component';
 import { C10Component } from './c10/c10.component';
 import {MatSelectModule} from '@angular/material/select';
+import { C11Component } from './c11/c11.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +31,8 @@ import {MatSelectModule} from '@angular/material/select';
     C7Component,
     C8Component,
     C9Component,
-    C10Component
+    C10Component,
+    C11Component
   ],
   imports: [
     BrowserModule,
@@ -39,7 +41,8 @@ import {MatSelectModule} from '@angular/material/select';
     MatButtonModule,
     MatIconModule,
     MatButtonToggleModule,
-    MatSelectModule
+    MatSelectModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
