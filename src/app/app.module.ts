@@ -12,7 +12,7 @@ import { C6Component } from './c6/c6.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { C7Component } from './c7/c7.component';
 import {MatButtonModule} from '@angular/material/button';
-
+import {MatIconModule} from '@angular/material/icon';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +25,7 @@ import {MatButtonModule} from '@angular/material/button';
     C7Component
   ],
   imports: [
-    BrowserModule,FormsModule, BrowserAnimationsModule,MatButtonModule
+    BrowserModule,FormsModule, BrowserAnimationsModule,MatButtonModule,MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
