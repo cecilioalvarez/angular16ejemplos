@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class C8Component {
 
+  cambiar():void {
+
+    console.log("hola desde el grupo");
+  }
 }
