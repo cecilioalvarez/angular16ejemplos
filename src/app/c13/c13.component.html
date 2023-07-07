@@ -38,18 +38,13 @@
 
         <mat-form-field>
           <mat-label>Profesion</mat-label>
-      <mat-select [(ngModel)]="persona.profesion" name="profesion">
-          <mat-option value="Informatico">
-           Informatico
-          </mat-option>
-          <mat-option value="Administrativo">
-            Administrativo
-           </mat-option>
-           <mat-option value="Ingeniero">
-            Ingeniero
-           </mat-option>
+      <mat-select [(ngModel)]="profesion" name="profesion">
+        <mat-option *ngFor="let profesion of profesiones" [value]="profesion">
+          {{profesion.nombre}},{{profesion.info}}
+        </mat-option>
         </mat-select>
       </mat-form-field>
+      {{profesion?.id}}{{profesion?.nombre}}{{profesion?.info}}
       </p>
       <p>{{persona.nombre}}{{persona.apellidos}}{{persona.edad}} {{persona.fechaNacimiento | date}} {{persona.profesion}}</p>
 </form>
