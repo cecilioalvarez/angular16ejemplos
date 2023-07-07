@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Persona } from '../persona';
 
 @Component({
   selector: 'app-c13',
@@ -7,6 +8,12 @@ import { Component } from '@angular/core';
 })
 export class C13Component {
 
-  nombreTxt:string="";
-  apellidosTxt:string="";
+  /*
+  nombreTxt?:string;
+  apellidosTxt?:string;
+  edadTxt?:string;
+  */
+
+   persona:Persona= {} as Persona;
+    
 }
