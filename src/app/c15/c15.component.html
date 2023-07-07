@@ -1,0 +1,15 @@
+<mat-list>
+    <mat-list-item *ngFor="let persona of personas;let indice=index;let impar = odd;let par = even;"
+     [ngClass]="{azul:par,verde:impar}"> 
+        {{indice+1}}
+        {{persona.nombre}} {{persona.apellidos}} {{persona.edad}}
+    </mat-list-item>
+</mat-list>
+
+<mat-list>
+    <mat-list-item *ngFor="let persona of personas;let indice=index;let primero = first;let ultimo = last;"
+     [ngClass]="{azul:primero,verde:ultimo}"> 
+        {{indice+1}}
+        {{persona.nombre}} {{persona.apellidos}} {{persona.edad}}
+    </mat-list-item>
+</mat-list>

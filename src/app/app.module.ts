@@ -27,6 +27,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatNativeDateModule} from '@angular/material/core';
 import { C14Component } from './c14/c14.component';
+import { C15Component } from './c15/c15.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -44,6 +45,7 @@ import { C14Component } from './c14/c14.component';
     C12Component,
     C13Component,
     C14Component,
+    C15Component,
     
   ],
   imports: [
