@@ -19,6 +19,11 @@ import { C9Component } from './c9/c9.component';
 import { C10Component } from './c10/c10.component';
 import {MatSelectModule} from '@angular/material/select';
 import { C11Component } from './c11/c11.component';
+import { C12Component } from './c12/c12.component';
+import {MatRadioModule} from '@angular/material/radio';
+import { C13Component } from './c13/c13.component';
+import {MatInputModule} from '@angular/material/input';
+import {MatFormFieldModule} from '@angular/material/form-field';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +37,10 @@ import { C11Component } from './c11/c11.component';
     C8Component,
     C9Component,
     C10Component,
-    C11Component
+    C11Component,
+    C12Component,
+    C13Component,
+    
   ],
   imports: [
     BrowserModule,
@@ -42,7 +50,10 @@ import { C11Component } from './c11/c11.component';
     MatIconModule,
     MatButtonToggleModule,
     MatSelectModule,
-    MatListModule
+    MatListModule,
+    MatRadioModule,
+    MatInputModule,
+    MatFormFieldModule
   ],
   providers: [],
   bootstrap: [AppComponent]

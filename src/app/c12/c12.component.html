@@ -1,0 +1,7 @@
+<mat-radio-group
+  [(ngModel)]="personaElegida">
+  <mat-radio-button class="example-radio-button" *ngFor="let persona of personas" [value]="persona">
+    {{persona.nombre}}
+  </mat-radio-button>
+</mat-radio-group>
+<div>Tu persona elegida es : {{personaElegida.nombre}}{{personaElegida.apellidos}}{{personaElegida.edad}} </div>
