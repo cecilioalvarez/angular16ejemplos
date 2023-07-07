@@ -21,5 +21,12 @@
           <input type="number" matInput placeholder="dame la edad" name="edadTxt" [(ngModel)]="persona.edad" min=0 max="100" >
         </mat-form-field>
       </p>
+
+      <p>
+        <mat-form-field >
+          <mat-label>FechaNacimiento</mat-label>
+          <input type="date" matInput placeholder="dame la feccha" name="fechaTxt" [(ngModel)]="persona.fechaNacimiento"  >
+        </mat-form-field>
+      </p>
       <p>{{persona.nombre}}{{persona.apellidos}}{{persona.edad}}</p>
 </form>
