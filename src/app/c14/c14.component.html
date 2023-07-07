@@ -1,0 +1,36 @@
+<form>
+    <p>
+    <mat-form-field >
+        <mat-label>ISBN</mat-label>
+        <input matInput placeholder="dame isbn"
+         name="isbn" [(ngModel)]="libro.isbn" >
+      </mat-form-field>
+
+    </p>
+    <p>
+      <mat-form-field >
+        <mat-label>Titulo</mat-label>
+        <input matInput placeholder="dame el titulo" 
+         name="titulo" [(ngModel)]="libro.titulo">
+      </mat-form-field>
+    </p>
+
+    <p>
+        <mat-form-field >
+          <mat-label>Autor</mat-label>
+          <input  matInput placeholder="dame el autor" name="autor" [(ngModel)]="libro.autor">
+ 
+        </mat-form-field>
+      </p>
+<p>
+
+      <mat-form-field>
+        <mat-label>Categoria</mat-label>
+    <mat-select [(ngModel)]="libro.categoria" name="categoria">
+      <mat-option *ngFor="let categoria of categorias" [value]="categoria">
+        {{categoria}}
+      </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </p>
+      {{libro.isbn}} {{libro.titulo}} {{libro.autor}} {{libro.categoria}}
