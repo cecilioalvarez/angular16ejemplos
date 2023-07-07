@@ -5,7 +5,7 @@ import { Persona } from './persona';
   providedIn: 'root'
 })
 export class PersonaService {
-  // contiene una lista de personas
+  // contiene una lista de personas en memoria
   personas:Persona[]=[];
   constructor() {
 

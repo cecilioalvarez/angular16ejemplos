@@ -28,6 +28,7 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatNativeDateModule} from '@angular/material/core';
 import { C14Component } from './c14/c14.component';
 import { C15Component } from './c15/c15.component';
+import { Lista1PersonasComponent } from './lista1-personas/lista1-personas.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -46,6 +47,7 @@ import { C15Component } from './c15/c15.component';
     C13Component,
     C14Component,
     C15Component,
+    Lista1PersonasComponent,
     
   ],
   imports: [
