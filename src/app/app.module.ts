@@ -29,6 +29,7 @@ import {MatNativeDateModule} from '@angular/material/core';
 import { C14Component } from './c14/c14.component';
 import { C15Component } from './c15/c15.component';
 import { Lista1PersonasComponent } from './lista1-personas/lista1-personas.component';
+import { Mayuscula1Pipe } from './mayuscula1.pipe';
 @NgModule({
   declarations: [
     AppComponent,
@@ -48,6 +49,7 @@ import { Lista1PersonasComponent } from './lista1-personas/lista1-personas.compo
     C14Component,
     C15Component,
     Lista1PersonasComponent,
+    Mayuscula1Pipe,
     
   ],
   imports: [
