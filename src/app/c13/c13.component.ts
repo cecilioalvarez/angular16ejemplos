@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class C13Component {
 
+  nombreTxt:string="";
+  apellidosTxt:string="";
 }
