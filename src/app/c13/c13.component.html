@@ -19,13 +19,19 @@
         <mat-form-field >
           <mat-label>Edad</mat-label>
           <input type="number" matInput placeholder="dame la edad" name="edadTxt" [(ngModel)]="persona.edad" min=0 max="100" >
+          <mat-hint>la edad es entre 0 y 100</mat-hint>
         </mat-form-field>
       </p>
 
       <p>
         <mat-form-field >
           <mat-label>FechaNacimiento</mat-label>
-          <input type="date" matInput placeholder="dame la feccha" name="fechaTxt" [(ngModel)]="persona.fechaNacimiento"  >
+          <input  matInput  [matDatepicker]="picker" placeholder="dame la feccha" name="fechaTxt" [(ngModel)]="persona.fechaNacimiento"  >
+          <mat-hint>Dia/Mes/Año</mat-hint>
+          <!--es una variable a nivel del template-->
+          <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+
         </mat-form-field>
       </p>
       <p>{{persona.nombre}}{{persona.apellidos}}{{persona.edad}}</p>

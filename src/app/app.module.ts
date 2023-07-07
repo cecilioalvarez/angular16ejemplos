@@ -24,6 +24,8 @@ import {MatRadioModule} from '@angular/material/radio';
 import { C13Component } from './c13/c13.component';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatNativeDateModule} from '@angular/material/core';
 @NgModule({
   declarations: [
     AppComponent,
@@ -53,7 +55,9 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     MatListModule,
     MatRadioModule,
     MatInputModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatDatepickerModule,
+    MatNativeDateModule
   ],
   providers: [],
   bootstrap: [AppComponent]
