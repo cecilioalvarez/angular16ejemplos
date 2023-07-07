@@ -34,5 +34,22 @@
 
         </mat-form-field>
       </p>
-      <p>{{persona.nombre}}{{persona.apellidos}}{{persona.edad}}</p>
+      <p>
+
+        <mat-form-field>
+          <mat-label>Profesion</mat-label>
+      <mat-select [(ngModel)]="persona.profesion" name="profesion">
+          <mat-option value="Informatico">
+           Informatico
+          </mat-option>
+          <mat-option value="Administrativo">
+            Administrativo
+           </mat-option>
+           <mat-option value="Ingeniero">
+            Ingeniero
+           </mat-option>
+        </mat-select>
+      </mat-form-field>
+      </p>
+      <p>{{persona.nombre}}{{persona.apellidos}}{{persona.edad}} {{persona.fechaNacimiento | date}} {{persona.profesion}}</p>
 </form>
