@@ -20,6 +20,10 @@ export class PersonaService {
   public insertar(persona:Persona):void {
      this.personas.push(persona);
   }
+  public borrar(persona:Persona):void {
+   var indice= this.personas.indexOf(persona);
+   this.personas.splice(indice,1); 
+ }
  
 
 }

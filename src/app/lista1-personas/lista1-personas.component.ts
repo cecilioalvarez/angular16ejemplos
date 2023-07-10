@@ -28,4 +28,7 @@ export class Lista1PersonasComponent {
   verFormularioInsertar() {
     this.estado='formularioInsertar';
   }
+  borrar(persona:Persona) {
+    this.personaService.borrar(persona);
+  }
 }
