@@ -8,13 +8,13 @@ import { MatTableDataSource } from '@angular/material/table';
   templateUrl: './lista1-personas.component.html',
   styleUrls: ['./lista1-personas.component.css']
 })
-export class Lista1PersonasComponent implements OnInit {
+export class Lista1PersonasComponent {
 
   estado: string = "listar";
   //un conjunto de variales asociadas a la vista y poco mas.
 
   displayedColumns: string[] = ['nombre', 'apellidos', 'edad', 'botonBorrar'];
-  dataSource = new MatTableDataSource<Persona>();
+ 
 
   personas: Persona[] = [];
   personaNueva: Persona = {} as Persona;
@@ -22,19 +22,18 @@ export class Lista1PersonasComponent implements OnInit {
   constructor(public personaService: PersonaService, private changeDetectorRefs: ChangeDetectorRef) {
 
     this.personas = personaService.buscarTodos();
-    this.dataSource.data = this.personas;
+    
     
   }
-  ngOnInit(): void {
-   
-  }
+ 
   insertar() {
 
     this.personaService.insertar(this.personaNueva);
 
     this.estado = 'listar';
 
-    this.dataSource= new MatTableDataSource(this.personaService.buscarTodos());
+    this.personas=[...this.personaService.buscarTodos()];
+    
   }
 
   verFormularioInsertar() {
@@ -43,8 +42,6 @@ export class Lista1PersonasComponent implements OnInit {
   borrar(persona: Persona) {
 
     this.personaService.borrar(persona);
-    this.dataSource.data = this.personaService.buscarTodos();
-
-
+    this.personas=[...this.personaService.buscarTodos()];
   }
 }
