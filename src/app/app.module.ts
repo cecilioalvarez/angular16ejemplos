@@ -26,6 +26,7 @@ import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatNativeDateModule} from '@angular/material/core';
+import {MatTableModule} from '@angular/material/table';
 import { C14Component } from './c14/c14.component';
 import { C15Component } from './c15/c15.component';
 import { Lista1PersonasComponent } from './lista1-personas/lista1-personas.component';
@@ -50,6 +51,7 @@ import { Mayuscula1Pipe } from './mayuscula1.pipe';
     C15Component,
     Lista1PersonasComponent,
     Mayuscula1Pipe,
+
     
   ],
   imports: [
@@ -65,7 +67,8 @@ import { Mayuscula1Pipe } from './mayuscula1.pipe';
     MatInputModule,
     MatFormFieldModule,
     MatDatepickerModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]
