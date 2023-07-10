@@ -12,6 +12,7 @@ export class Lista1PersonasComponent {
   //un conjunto de variales asociadas a la vista y poco mas.
   
   personas:Persona[]=[];
+  personaNueva:Persona= {} as Persona;
 
   constructor(public personaService:PersonaService) {
 
