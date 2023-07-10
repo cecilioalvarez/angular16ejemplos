@@ -14,6 +14,7 @@ export class PersonaService {
   }
 
   public buscarTodos():Persona[] {
+    console.log(this.personas);
     return this.personas;
   }
 

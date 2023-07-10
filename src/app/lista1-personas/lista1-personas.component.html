@@ -1,15 +1,6 @@
 <div [hidden]="estado!='listar'">
-    <mat-list>
-        <mat-list-item *ngFor="let persona of personas;">
-
-            {{persona.nombre | mayuscula1}} {{persona.apellidos}} {{persona.edad}}
-            <button mat-raised-button color="primary" (click)="borrar(persona)">Borrar</button>
-        </mat-list-item>
-    </mat-list>
-    <p>
-        <button mat-raised-button color="primary" (click)="verFormularioInsertar()">Nueva Persona</button>
-    </p>
-
+   
+   
 
     <table mat-table [dataSource]="personas" class="mat-elevation-z8">
 
@@ -44,6 +35,9 @@
       
 
 
+      <p>
+        <button mat-raised-button color="primary" (click)="verFormularioInsertar()">Nueva Persona</button>
+    </p>
 
 
 
