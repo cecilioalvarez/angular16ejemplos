@@ -86,3 +86,19 @@
         </p>
     </form>
     </div>
+
+    <div [hidden]="estado!='detalle'">
+            <p>
+                {{personaDetalle.nombre}}
+            </p>
+            <p>
+                {{personaDetalle.apellidos}}
+            </p>
+            <p>
+                {{personaDetalle.edad}}
+            </p>
+    
+            <p>
+                <button mat-raised-button color="primary" (click)="volver()"> Volver</button>
+            </p>
+        </div>

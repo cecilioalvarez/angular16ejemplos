@@ -18,6 +18,7 @@ export class Lista1PersonasComponent {
 
   personas: Persona[] = [];
   personaNueva: Persona = {} as Persona;
+  personaDetalle: Persona = {} as Persona;
 
   constructor(public personaService: PersonaService, private changeDetectorRefs: ChangeDetectorRef) {
 
@@ -46,6 +47,10 @@ export class Lista1PersonasComponent {
   }
   detalle(persona:Persona) {
     this.estado = 'detalle';
+    this.personaDetalle=persona;
 
+  }
+  volver() {
+    this.estado="listar";
   }
 }
