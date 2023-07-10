@@ -13,7 +13,7 @@ export class Lista1PersonasComponent {
   estado: string = "listar";
   //un conjunto de variales asociadas a la vista y poco mas.
 
-  displayedColumns: string[] = ['nombre', 'apellidos', 'edad', 'botonBorrar'];
+  displayedColumns: string[] = ['nombre', 'apellidos', 'edad', 'botonBorrar','botonDetalle'];
  
 
   personas: Persona[] = [];
@@ -43,5 +43,9 @@ export class Lista1PersonasComponent {
 
     this.personaService.borrar(persona);
     this.personas=[...this.personaService.buscarTodos()];
+  }
+  detalle(persona:Persona) {
+    this.estado = 'detalle';
+
   }
 }
