@@ -9,6 +9,7 @@ import { PersonaService } from '../persona.service';
 })
 export class Lista1PersonasComponent {
 
+  estado:string="listar";
   //un conjunto de variales asociadas a la vista y poco mas.
   
   personas:Persona[]=[];
@@ -20,6 +21,11 @@ export class Lista1PersonasComponent {
   }
   insertar(){
 
-    this.personas.push(this.personaNueva);
+    this.personaService.insertar(this.personaNueva);
+    this.estado='listar';
+  }
+
+  verFormularioInsertar() {
+    this.estado='formularioInsertar';
   }
 }

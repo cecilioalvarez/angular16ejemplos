@@ -1,38 +1,42 @@
+<div [hidden]="estado!='listar'">
+    <mat-list>
+        <mat-list-item *ngFor="let persona of personas;">
 
-<mat-list>
-    <mat-list-item *ngFor="let persona of personas;">
-    
-        {{persona.nombre | mayuscula1}} {{persona.apellidos}} {{persona.edad}}
-    </mat-list-item>
-</mat-list>
-*********************
-
-<form>
+            {{persona.nombre | mayuscula1}} {{persona.apellidos}} {{persona.edad}}
+        </mat-list-item>
+    </mat-list>
     <p>
-  <mat-form-field >
-        <mat-label>Nombre:</mat-label>
-        <input matInput placeholder="introduce el nombre"
-         name="nombre" [(ngModel)]="personaNueva.nombre" >
-      </mat-form-field>
-
-    </p>  
-    <p>
-      <mat-form-field >
-        <mat-label>Apellidos</mat-label>
-        <input matInput placeholder="introduce los apellidos" 
-         name="apellidos" [(ngModel)]="personaNueva.apellidos">
-      </mat-form-field>
+        <button mat-raised-button color="primary" (click)="verFormularioInsertar()">Nueva Persona</button>
     </p>
+   
+</div>
+<div [hidden]="estado!='formularioInsertar'">
+    <form>
+        <p>
+            <mat-form-field>
+                <mat-label>Nombre:</mat-label>
+                <input matInput placeholder="introduce el nombre" name="nombre" [(ngModel)]="personaNueva.nombre">
+            </mat-form-field>
 
-    <p>
-        <mat-form-field >
-          <mat-label>Edad</mat-label>
-          <input  matInput placeholder="introduce la edad" name="edad" [(ngModel)]="personaNueva.edad">
- 
-        </mat-form-field>
-      </p>
+        </p>
+        <p>
+            <mat-form-field>
+                <mat-label>Apellidos</mat-label>
+                <input matInput placeholder="introduce los apellidos" name="apellidos"
+                    [(ngModel)]="personaNueva.apellidos">
+            </mat-form-field>
+        </p>
 
-     <p>
-      <button mat-raised-button color="primary" (click)="insertar()">Insertar</button>
-    </p>
-<p>
+        <p>
+            <mat-form-field>
+                <mat-label>Edad</mat-label>
+                <input matInput placeholder="introduce la edad" name="edad" [(ngModel)]="personaNueva.edad">
+
+            </mat-form-field>
+        </p>
+
+        <p>
+            <button mat-raised-button color="primary" (click)="insertar()">Insertar</button>
+        </p>
+    </form>
+    </div>

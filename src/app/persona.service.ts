@@ -16,6 +16,10 @@ export class PersonaService {
   public buscarTodos():Persona[] {
     return this.personas;
   }
+
+  public insertar(persona:Persona):void {
+     this.personas.push(persona);
+  }
  
 
 }
