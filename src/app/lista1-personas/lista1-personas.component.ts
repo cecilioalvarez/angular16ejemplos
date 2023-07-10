@@ -18,4 +18,8 @@ export class Lista1PersonasComponent {
 
     this.personas=personaService.buscarTodos();
   }
+  insertar(){
+
+    this.personas.push(this.personaNueva);
+  }
 }
