@@ -3,6 +3,8 @@ import { Persona } from '../persona';
 import { PersonaService } from '../persona.service';
 import { MatTableDataSource } from '@angular/material/table';
 import { Router } from '@angular/router';
+import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
+import { DialogoComponent } from '../dialogo/dialogo.component';
 
 @Component({
   selector: 'app-lista1-personas',
@@ -21,7 +23,7 @@ export class Lista1PersonasComponent {
   personaNueva: Persona = {} as Persona;
   personaDetalle: Persona = {} as Persona;
 
-  constructor(public personaService: PersonaService,public router:Router) {
+  constructor(public personaService: PersonaService,public router:Router,public dialog:MatDialog) {
 
     this.personas = personaService.buscarTodos();
     
@@ -35,9 +37,19 @@ export class Lista1PersonasComponent {
     this.router.navigate(["/formularioInsertar"]);
   }
   borrar(persona: Persona) {
+  
 
-    this.personaService.borrar(persona);
-    this.personas=[...this.personaService.buscarTodos()];
+
+
+    const configDialogo= new MatDialogConfig();
+    configDialogo.width="300px";
+    configDialogo.height="250px";
+
+    var dialogoResultado= this.dialog.open(DialogoComponent,configDialogo);
+
+    
+    //this.personaService.borrar(persona);
+    //this.personas=[...this.personaService.buscarTodos()];
   }
   detalle(persona:Persona) {
     

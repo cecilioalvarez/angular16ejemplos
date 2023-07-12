@@ -35,6 +35,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { FormularioPersonaComponent } from './formulario-persona/formulario-persona.component';
 import { DetallePersonaComponent } from './detalle-persona/detalle-persona.component';
 import { EditarPersonaComponent } from './editar-persona/editar-persona.component';
+import { DialogoComponent } from './dialogo/dialogo.component';
+import {MatDialogModule} from '@angular/material/dialog';
 @NgModule({
   declarations: [
     AppComponent,
@@ -58,6 +60,7 @@ import { EditarPersonaComponent } from './editar-persona/editar-persona.componen
     FormularioPersonaComponent,
     DetallePersonaComponent,
     EditarPersonaComponent,
+    DialogoComponent,
 
     
   ],
@@ -76,6 +79,7 @@ import { EditarPersonaComponent } from './editar-persona/editar-persona.componen
     MatDatepickerModule,
     MatNativeDateModule,
     MatTableModule,
+    MatDialogModule,
     AppRoutingModule
   ],
   providers: [],
