@@ -2,6 +2,7 @@ import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { Persona } from '../persona';
 import { PersonaService } from '../persona.service';
 import { MatTableDataSource } from '@angular/material/table';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-lista1-personas',
@@ -20,7 +21,7 @@ export class Lista1PersonasComponent {
   personaNueva: Persona = {} as Persona;
   personaDetalle: Persona = {} as Persona;
 
-  constructor(public personaService: PersonaService, private changeDetectorRefs: ChangeDetectorRef) {
+  constructor(public personaService: PersonaService,public router:Router) {
 
     this.personas = personaService.buscarTodos();
     
@@ -38,7 +39,8 @@ export class Lista1PersonasComponent {
   }
 
   verFormularioInsertar() {
-    this.estado = 'formularioInsertar';
+    //this.estado = 'formularioInsertar';
+    this.router.navigate(["/formularioInsertar"]);
   }
   borrar(persona: Persona) {
 
@@ -46,8 +48,8 @@ export class Lista1PersonasComponent {
     this.personas=[...this.personaService.buscarTodos()];
   }
   detalle(persona:Persona) {
-    this.estado = 'detalle';
-    this.personaDetalle=persona;
+    
+    this.router.navigate(["/detalle",persona.nombre]);
 
   }
   volver() {

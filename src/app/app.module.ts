@@ -31,6 +31,9 @@ import { C14Component } from './c14/c14.component';
 import { C15Component } from './c15/c15.component';
 import { Lista1PersonasComponent } from './lista1-personas/lista1-personas.component';
 import { Mayuscula1Pipe } from './mayuscula1.pipe';
+import { AppRoutingModule } from './app-routing.module';
+import { FormularioPersonaComponent } from './formulario-persona/formulario-persona.component';
+import { DetallePersonaComponent } from './detalle-persona/detalle-persona.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -51,6 +54,8 @@ import { Mayuscula1Pipe } from './mayuscula1.pipe';
     C15Component,
     Lista1PersonasComponent,
     Mayuscula1Pipe,
+    FormularioPersonaComponent,
+    DetallePersonaComponent,
 
     
   ],
@@ -68,7 +73,8 @@ import { Mayuscula1Pipe } from './mayuscula1.pipe';
     MatFormFieldModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    MatTableModule
+    MatTableModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
