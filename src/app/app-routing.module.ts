@@ -4,12 +4,14 @@ import { RouterModule, Routes } from '@angular/router';
 import { Lista1PersonasComponent } from './lista1-personas/lista1-personas.component';
 import { FormularioPersonaComponent } from './formulario-persona/formulario-persona.component';
 import { DetallePersonaComponent } from './detalle-persona/detalle-persona.component';
+import { EditarPersonaComponent } from './editar-persona/editar-persona.component';
 
 const routes: Routes = [
 { path: "", redirectTo: "/lista", pathMatch: "full" },
 { path: "lista", component: Lista1PersonasComponent, pathMatch: "full" }, 
 { path: "formularioInsertar", component: FormularioPersonaComponent, pathMatch: "full" },
-{ path: "detalle/:nombre", component: DetallePersonaComponent, pathMatch: "full" }
+{ path: "detalle/:nombre", component: DetallePersonaComponent, pathMatch: "full" },
+{ path: "editar/:nombre", component: EditarPersonaComponent, pathMatch: "full" }
 ];
 
 

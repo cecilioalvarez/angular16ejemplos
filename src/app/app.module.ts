@@ -34,6 +34,7 @@ import { Mayuscula1Pipe } from './mayuscula1.pipe';
 import { AppRoutingModule } from './app-routing.module';
 import { FormularioPersonaComponent } from './formulario-persona/formulario-persona.component';
 import { DetallePersonaComponent } from './detalle-persona/detalle-persona.component';
+import { EditarPersonaComponent } from './editar-persona/editar-persona.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -56,6 +57,7 @@ import { DetallePersonaComponent } from './detalle-persona/detalle-persona.compo
     Mayuscula1Pipe,
     FormularioPersonaComponent,
     DetallePersonaComponent,
+    EditarPersonaComponent,
 
     
   ],

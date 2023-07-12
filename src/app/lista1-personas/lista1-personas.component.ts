@@ -14,7 +14,7 @@ export class Lista1PersonasComponent {
   estado: string = "listar";
   //un conjunto de variales asociadas a la vista y poco mas.
 
-  displayedColumns: string[] = ['nombre', 'apellidos', 'edad', 'botonBorrar','botonDetalle'];
+  displayedColumns: string[] = ['nombre', 'apellidos', 'edad', 'botonBorrar','botonDetalle','botonEditar'];
  
 
   personas: Persona[] = [];
@@ -28,15 +28,7 @@ export class Lista1PersonasComponent {
     
   }
  
-  insertar() {
-
-    this.personaService.insertar(this.personaNueva);
-
-    this.estado = 'listar';
-
-    this.personas=[...this.personaService.buscarTodos()];
-    
-  }
+ 
 
   verFormularioInsertar() {
     //this.estado = 'formularioInsertar';
@@ -54,5 +46,9 @@ export class Lista1PersonasComponent {
   }
   volver() {
     this.estado="listar";
+  }
+  editar(persona:Persona) {
+
+    this.router.navigate(["/editar",persona.nombre]);
   }
 }
