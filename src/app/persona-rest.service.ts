@@ -17,4 +17,8 @@ export class PersonaRESTService {
     return this.http.get<Persona[]>("http://localhost:3000/personas");
 
    }
+   public insertar(persona:Persona) :Observable<Persona> {
+
+    return this.http.post<Persona>("http://localhost:3000/personas",persona);
+   }
 }

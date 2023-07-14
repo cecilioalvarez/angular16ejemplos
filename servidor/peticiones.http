@@ -1,1 +1,12 @@
 http://localhost:3000/personas
+
+###########
+
+POST http://localhost:3000/personas
+content-type: application/json
+
+{
+    "nombre": "marta",
+    "apellidos": "perez",
+    "edad":"30"
+}

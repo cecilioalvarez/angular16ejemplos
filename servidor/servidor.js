@@ -19,6 +19,12 @@ app.get('/personas', (req, res) => {
  res.send(personas);
 })
 
+app.post("/personas",function(req,res) {
+    console.log(req.body);
+    personas.push(req.body);
+    res.status(201).send();
+})
+
 
 app.listen(port, () => {
   console.log(`trabajando con express en el puerto ${port}`)
