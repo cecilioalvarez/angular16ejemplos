@@ -37,6 +37,7 @@ import { DetallePersonaComponent } from './detalle-persona/detalle-persona.compo
 import { EditarPersonaComponent } from './editar-persona/editar-persona.component';
 import { DialogoComponent } from './dialogo/dialogo.component';
 import {MatDialogModule} from '@angular/material/dialog';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -80,7 +81,8 @@ import {MatDialogModule} from '@angular/material/dialog';
     MatNativeDateModule,
     MatTableModule,
     MatDialogModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component,Inject } from '@angular/core';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { MatDialogRef } from '@angular/material/dialog';
 @Component({
@@ -10,7 +10,7 @@ export class DialogoComponent {
 
   mensaje?:string;
 
-  constructor( @Inject(MAT_DIALOG_DATA) data:string) {
+  constructor() {
 
   }
 
