@@ -17,7 +17,19 @@ personas.push({nombre:"antonio",apellidos:"perez",edad:50});
 
 app.get('/personas', (req, res) => {
  res.send(personas);
-})
+});
+
+app.get("/personas/:nombre",function(req,res) {
+
+
+  let listafiltrada=personas.filter(function(elemento) {
+
+    return elemento.nombre==req.params.nombre;
+  })
+
+  res.send(listafiltrada[0]);
+
+});
 
 app.post("/personas",function(req,res) {
     console.log(req.body);
