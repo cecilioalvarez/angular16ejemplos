@@ -31,6 +31,20 @@ app.get("/personas/:nombre",function(req,res) {
 
 });
 
+app.delete("/personas/:nombre",function(req,res) {
+
+
+  let personaBorrar=personas.filter(function(elemento) {
+
+    return elemento.nombre==req.params.nombre;
+  })[0];
+  let indice= personas.indexOf(personaBorrar);
+  personas.splice(indice,1);
+
+  res.status(204).send();
+
+});
+
 app.post("/personas",function(req,res) {
     console.log(req.body);
     personas.push(req.body);

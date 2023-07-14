@@ -5,6 +5,11 @@ http://localhost:3000/personas/david
 
 ###########
 
+
+DELETE  http://localhost:3000/personas/david
+
+###########
+
 POST http://localhost:3000/personas
 content-type: application/json
 
