@@ -39,6 +39,8 @@ import { DialogoComponent } from './dialogo/dialogo.component';
 import {MatDialogModule} from '@angular/material/dialog';
 import { HttpClientModule } from '@angular/common/http';
 import { FormularioValidacionComponent } from './formulario-validacion/formulario-validacion.component';
+import { PadreComponent } from './padre/padre.component';
+import { HijoComponent } from './hijo/hijo.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -64,6 +66,8 @@ import { FormularioValidacionComponent } from './formulario-validacion/formulari
     EditarPersonaComponent,
     DialogoComponent,
     FormularioValidacionComponent,
+    PadreComponent,
+    HijoComponent,
 
     
   ],
