@@ -1,7 +1,7 @@
 <table id="mitabla">
     <tr *ngFor="let persona of personas"  >
 
-        <app-fila-personas [persona]="persona" style="display: contents" (eventoBorrar)="borrar(persona)"></app-fila-personas>
+        <app-fila-personas [persona]="persona" style="display: contents" (eventoBorrar)="borrar(persona)" (eventoSalvar)="salvar(persona)"></app-fila-personas>
    
     </tr>
 

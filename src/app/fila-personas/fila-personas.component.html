@@ -1,17 +1,42 @@
-<ng-container>
-<td>
-    {{persona.nombre}}
+<ng-container *ngIf="persona!=personaEditar">
+    <td>
+        {{persona.nombre}}
 
-</td>
-<td>
-    {{persona.apellidos}}
+    </td>
+    <td>
+        {{persona.apellidos}}
 
-</td>
-<td>
-    {{persona.edad}}
+    </td>
+    <td>
+        {{persona.edad}}
 
-</td>
-<td>
-    <button mat-raised-button color="primary" (click)="borrar(persona)">Borrar</button>
-</td>
+    </td>
+    <td>
+        <button mat-raised-button color="primary" (click)="borrar(persona)">Borrar</button>
+    </td>
+    <td>
+        <button mat-raised-button color="primary" (click)="editar(persona)">Editar</button>
+    </td>
+</ng-container>
+
+
+<ng-container *ngIf="persona==personaEditar">
+    <td>
+       <input type="text" [(ngModel)]="personaEditar.nombre" name="nombre"/>
+
+    </td>
+    <td>
+        <input type="text" [(ngModel)]="personaEditar.apellidos" name="apellidos"/>
+
+    </td>
+    <td>
+        <input type="text" [(ngModel)]="personaEditar.edad" name="edad"/>
+
+    </td>
+    <td>
+        <button mat-raised-button color="primary" (click)="cancelar()">Cancelar</button>
+    </td>
+    <td>
+        <button mat-raised-button color="primary" (click)="salvar(persona)">Salvar</button>
+    </td>
 </ng-container>

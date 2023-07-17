@@ -45,4 +45,12 @@ export class Lista2Component {
 
     });
   }
+  salvar(persona:Persona) {
+
+    this.personaService.actualizar(persona).subscribe((datos)=> {
+      this.personaService.buscarTodos().subscribe((datos) => {
+        this.personas = datos;
+      });
+    });
+  }
 }
