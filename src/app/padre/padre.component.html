@@ -6,5 +6,5 @@
     <button type="button" mat-raised-button color="primary" (click)="pulsarPadre('ana')">ponerana</button>
     <button type="button" mat-raised-button color="primary" (click)="pulsarPersona()">pasarPersona</button>
 <p>
-    <app-hijo [nombre]="nombre" [persona]="persona"></app-hijo>
+    <app-hijo [nombre]="nombre" [persona]="persona" (eventoMensaje)="verMensajeDelHijo($event)"></app-hijo>
 </p>

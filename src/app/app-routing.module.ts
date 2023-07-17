@@ -5,10 +5,11 @@ import { Lista1PersonasComponent } from './lista1-personas/lista1-personas.compo
 import { FormularioPersonaComponent } from './formulario-persona/formulario-persona.component';
 import { DetallePersonaComponent } from './detalle-persona/detalle-persona.component';
 import { EditarPersonaComponent } from './editar-persona/editar-persona.component';
+import { Lista2Component } from './lista2/lista2.component';
 
 const routes: Routes = [
 { path: "", redirectTo: "/lista", pathMatch: "full" },
-{ path: "lista", component: Lista1PersonasComponent, pathMatch: "full" }, 
+{ path: "lista", component: Lista2Component, pathMatch: "full" }, 
 { path: "formularioInsertar", component: FormularioPersonaComponent, pathMatch: "full" },
 { path: "detalle/:nombre", component: DetallePersonaComponent, pathMatch: "full" },
 { path: "editar/:nombre", component: EditarPersonaComponent, pathMatch: "full" }

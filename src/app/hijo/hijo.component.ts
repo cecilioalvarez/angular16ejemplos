@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Persona } from '../persona';
 
 @Component({
@@ -12,10 +12,14 @@ export class HijoComponent {
   @Input()
   nombre?:string;
 
+  @Output()
+  eventoMensaje= new EventEmitter<String>();
+
   @Input()
   persona?:Persona;
   pulsarhijo() {
 
     console.log("has pulsado el hijo");
+    this.eventoMensaje.emit("hola soy el hijo");
   }
 }

@@ -21,4 +21,9 @@ export class PadreComponent {
 
     this.persona= new Persona("juan","gomez",40);
   }
+
+  verMensajeDelHijo(evento:String) {
+
+    window.alert(evento);
+  }
 }

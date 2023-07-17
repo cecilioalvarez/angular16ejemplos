@@ -41,6 +41,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormularioValidacionComponent } from './formulario-validacion/formulario-validacion.component';
 import { PadreComponent } from './padre/padre.component';
 import { HijoComponent } from './hijo/hijo.component';
+import { FilaPersonasComponent } from './fila-personas/fila-personas.component';
+import { Lista2Component } from './lista2/lista2.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -68,6 +70,8 @@ import { HijoComponent } from './hijo/hijo.component';
     FormularioValidacionComponent,
     PadreComponent,
     HijoComponent,
+    FilaPersonasComponent,
+    Lista2Component,
 
     
   ],
