@@ -38,6 +38,7 @@ import { EditarPersonaComponent } from './editar-persona/editar-persona.componen
 import { DialogoComponent } from './dialogo/dialogo.component';
 import {MatDialogModule} from '@angular/material/dialog';
 import { HttpClientModule } from '@angular/common/http';
+import { FormularioValidacionComponent } from './formulario-validacion/formulario-validacion.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -62,6 +63,7 @@ import { HttpClientModule } from '@angular/common/http';
     DetallePersonaComponent,
     EditarPersonaComponent,
     DialogoComponent,
+    FormularioValidacionComponent,
 
     
   ],

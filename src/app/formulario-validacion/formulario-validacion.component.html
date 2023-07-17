@@ -1,0 +1,54 @@
+<form #f="ngForm" name="miformulario" (ngSubmit)="validar()">
+    <p style="color:blue" *ngIf="nombre.pristine">Hasta que no salves este formulario tu alta no sera efectiva</p>
+    <p>
+      
+        <mat-form-field>
+            <mat-label>Nombre:</mat-label>
+            <input matInput placeholder="introduce el nombre" 
+             #nombre="ngModel" name="nombre" [(ngModel)]="persona.nombre" required pattern="^[a-z]{3,10}$"> 
+        </mat-form-field>
+        <span style="color:red;" *ngIf="nombre.invalid">* </span>
+      
+
+    </p>
+
+    <p>
+        <mat-form-field>
+            <mat-label>Apellidos:</mat-label>
+            <input matInput placeholder="introduce los apellidos"  #apellidos="ngModel" name="apellidos" [(ngModel)]="persona.apellidos" required> 
+        </mat-form-field>
+        <span style="color:red;" *ngIf="apellidos.invalid">* </span>
+
+    </p>
+
+    <p>
+        <mat-form-field>
+            <mat-label>Edad:</mat-label>
+            <input matInput type="number" placeholder="introduce la edad"  #edad="ngModel" name="edad" [(ngModel)]="persona.edad" required min="0" max="100"> 
+        </mat-form-field>
+        <span style="color:red;" *ngIf="edad.invalid">edad invalida </span>
+
+    </p>
+
+    <p>
+        <button  type="submit" mat-raised-button color="primary" [disabled]="f.invalid">Validar</button>
+    </p>
+</form>
+<p style="color:red" *ngIf="nombre.errors?.['required']"> el nombre es obligatorio</p>
+<p style="color:red" *ngIf="nombre.errors?.['pattern']"> el nombre no cumple el formatode 3 a 10 letras</p>
+
+{{edad}}
+<p style="color:red" *ngIf="edad.errors?.['required']">la edad es obligatoria</p>
+<p style="color:red" *ngIf="edad.errors?.['min']"> la edad no puede ser menor que 0</p>
+<p style="color:red" *ngIf="edad.errors?.['max']"> la edad no puede ser mayor que 100</p>
+
+<!--<p style="color:red" *ngIf="nombre.invalid && nombre.touched"> el nombre es obligatorio</p>
+<p style="color:red" *ngIf="apellidos.invalid && apellidos.touched"> los apellidos son obligatorios</p>
+-->
+**********************
+<p>
+ El formulario contiene:{{f.value | json}}
+ El formulario es valido:{{f.valid | json}}
+ Nombre errores: {{edad.errors |json}}
+</p>
+
