@@ -48,10 +48,20 @@ export class Lista1PersonasComponent {
     const configDialogo = new MatDialogConfig();
     configDialogo.width = "300px";
     configDialogo.height = "250px";
+    configDialogo.data = {
+
+      nombre: persona.nombre
+    }
 
     var dialogoResultado = this.dialog.open(DialogoComponent, configDialogo);
 
+    dialogoResultado.beforeClosed().subscribe(() => {
 
+      this.personaService.buscarTodos().subscribe((datos) => {
+        this.personas = datos;
+      });
+
+    });
     //this.personaService.borrar(persona);
     //this.personas=[...this.personaService.buscarTodos()];
   }
