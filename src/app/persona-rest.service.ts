@@ -23,6 +23,12 @@ export class PersonaRESTService {
 
    }
 
+   public actualizar(persona:Persona) : Observable<Persona> {
+
+    return this.http.put<Persona>(`http://localhost:3000/personas/${persona.nombre}`,persona);
+
+   }
+
    public borrar(nombre:string) : Observable<Persona> {
 
     return this.http.delete<Persona>(`http://localhost:3000/personas/${nombre}`);

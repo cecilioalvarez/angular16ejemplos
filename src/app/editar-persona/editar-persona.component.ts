@@ -37,11 +37,13 @@ export class EditarPersonaComponent {
 
 
   salvar(persona: Persona) {
-    /*
-    var personaEditada = this.personaService.buscar(persona.nombre);
-    personaEditada.apellidos = persona.apellidos;
-    personaEditada.edad = persona.edad;
-    this.router.navigate(["/lista"]);
-    */
+   
+    this.personaService.actualizar(persona).subscribe((datos)=> {
+      this.router.navigate(["/lista"]);
+
+    });
+
+  
+  
   }
 }

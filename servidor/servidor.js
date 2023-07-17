@@ -31,6 +31,24 @@ app.get("/personas/:nombre",function(req,res) {
 
 });
 
+
+app.put("/personas/:nombre",function(req,res) {
+
+
+  let listafiltrada=personas.filter(function(elemento) {
+
+    return elemento.nombre==req.params.nombre;
+  })
+
+  var personaActualizar=listafiltrada[0];
+  personaActualizar.nombre=req.body.nombre;
+  personaActualizar.apellidos=req.body.apellidos;
+  personaActualizar.edad=req.body.edad;
+  res.status(200).send();
+
+
+});
+
 app.delete("/personas/:nombre",function(req,res) {
 
 
