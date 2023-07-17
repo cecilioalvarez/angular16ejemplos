@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Persona } from '../persona';
 import { PersonaService } from '../persona.service';
 import { ActivatedRoute, Router } from '@angular/router';
+import { PersonaRESTService } from '../persona-rest.service';
 
 @Component({
   selector: 'app-editar-persona',
@@ -10,36 +11,37 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class EditarPersonaComponent {
 
-  personaEditar={} as Persona;
-  
-
-  constructor(public personaService: PersonaService,public router:Router ,activeRoute:ActivatedRoute) {
+  personaEditar = {} as Persona;
 
 
-    activeRoute.paramMap.subscribe(params=> {
- 
-      var nombre:string|null=params.get("nombre");
+  constructor(public personaService: PersonaRESTService, public router: Router, activeRoute: ActivatedRoute) {
 
-        if (nombre) {
-          this.personaEditar=this.personaService.buscar(nombre);
-        }
 
-        
-        
-     });
+    activeRoute.paramMap.subscribe(params => {
+      console.log(params.get("nombre"));
+      var nombre: string | null = params.get("nombre");
 
-   
-    
-    
+      if (nombre) {
+        this.personaService.buscarUno(nombre).subscribe((datos) => {
+
+          this.personaEditar = datos;
+        })
+
+      }
+    });
+
+
+
+
   }
- 
 
-  salvar(persona:Persona) {
-    
-    var personaEditada=this.personaService.buscar(persona.nombre);
-    personaEditada.apellidos=persona.apellidos;
-    personaEditada.edad=persona.edad;
+
+  salvar(persona: Persona) {
+    /*
+    var personaEditada = this.personaService.buscar(persona.nombre);
+    personaEditada.apellidos = persona.apellidos;
+    personaEditada.edad = persona.edad;
     this.router.navigate(["/lista"]);
-
+    */
   }
 }
