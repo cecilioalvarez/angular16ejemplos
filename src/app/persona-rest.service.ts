@@ -2,40 +2,17 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Persona } from './persona';
 import { Observable } from 'rxjs';
+import { GenericRESTService } from './generic-rest.service';
 
 @Injectable({
   providedIn: 'root'
 })
-export class PersonaRESTService {
+export class PersonaRESTService extends GenericRESTService<Persona,keyof Persona>{
 
-  constructor(public http:HttpClient) {
+  constructor(public  override http:HttpClient) {
 
-
-   }
-   public buscarTodos() : Observable<Persona[]> {
-
-    return this.http.get<Persona[]>("http://localhost:3000/personas");
+    super("personas","nombre",http);
 
    }
-   public buscarUno(nombre:string) : Observable<Persona> {
-
-    return this.http.get<Persona>(`http://localhost:3000/personas/${nombre}`);
-
-   }
-
-   public actualizar(persona:Persona) : Observable<Persona> {
-
-    return this.http.put<Persona>(`http://localhost:3000/personas/${persona.nombre}`,persona);
-
-   }
-
-   public borrar(nombre:string) : Observable<Persona> {
-
-    return this.http.delete<Persona>(`http://localhost:3000/personas/${nombre}`);
-
-   }
-   public insertar(persona:Persona) :Observable<Persona> {
-
-    return this.http.post<Persona>("http://localhost:3000/personas",persona);
-   }
+  
 }
