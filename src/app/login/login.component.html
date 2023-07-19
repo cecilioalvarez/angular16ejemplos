@@ -1,0 +1,22 @@
+<form>
+    <p>
+        <mat-form-field>
+            <mat-label>Nombre:</mat-label>
+            <input matInput placeholder="introduce el nombre" name="nombre" [(ngModel)]="usuario.nombre">
+        </mat-form-field>
+
+    </p>
+    <p>
+        <mat-form-field>
+            <mat-label>Clave</mat-label>
+            <input type="password" matInput placeholder="introduce la clave" name="clave"
+                [(ngModel)]="usuario.clave">
+        </mat-form-field>
+    </p>
+
+  
+    <p>
+        <button  type="button" mat-raised-button color="primary" (click)="login()">Login</button>
+    </p>
+</form>
+

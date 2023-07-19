@@ -43,6 +43,7 @@ import { PadreComponent } from './padre/padre.component';
 import { HijoComponent } from './hijo/hijo.component';
 import { FilaPersonasComponent } from './fila-personas/fila-personas.component';
 import { Lista2Component } from './lista2/lista2.component';
+import { LoginComponent } from './login/login.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -72,6 +73,7 @@ import { Lista2Component } from './lista2/lista2.component';
     HijoComponent,
     FilaPersonasComponent,
     Lista2Component,
+    LoginComponent,
 
     
   ],

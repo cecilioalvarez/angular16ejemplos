@@ -32,7 +32,7 @@ app.post("/login", function (req, res) {
     console.log("usuario valido");
     var token = jwtToken.sign({ id: usuario.nombre }, 'superclave', { expiresIn: '2h' });
     console.log(token);
-    res.status(200).send(token);
+    res.status(200).send({"token":token});
   } else {
     console.log("usuario no valido");
     res.status(401).send();
