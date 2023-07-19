@@ -1,0 +1,15 @@
+http://localhost:3000/personas
+
+###########
+
+POST http://localhost:3000/login
+content-type: application/json
+
+{
+    "nombre": "cecilio",
+    "clave": "123456"
+}
+
+###########
+http://localhost:3000/personas
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNlY2lsaW8iLCJpYXQiOjE2ODk3NDk5MjksImV4cCI6MTY4OTc1NzEyOX0.7559Y-KLDdtWwg-PJoANUw3725_zT4t8phh4T3TguGk 
