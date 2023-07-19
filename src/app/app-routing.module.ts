@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { Lista1PersonasComponent } from './lista1-personas/lista1-personas.component';

@@ -44,6 +44,11 @@ import { HijoComponent } from './hijo/hijo.component';
 import { FilaPersonasComponent } from './fila-personas/fila-personas.component';
 import { Lista2Component } from './lista2/lista2.component';
 import { LoginComponent } from './login/login.component';
+import { JwtModule } from "@auth0/angular-jwt";
+
+export function tokenGetter() {
+  return localStorage.getItem("token");
+}
 @NgModule({
   declarations: [
     AppComponent,
@@ -94,7 +99,14 @@ import { LoginComponent } from './login/login.component';
     MatTableModule,
     MatDialogModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    JwtModule.forRoot({
+      config: {
+        tokenGetter: tokenGetter,
+        allowedDomains: ["localhost:3000"],
+        disallowedRoutes: ["localhost:3000/login"],
+      },
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent]
