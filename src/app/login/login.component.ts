@@ -20,7 +20,7 @@ export class LoginComponent {
 
     this.loginService.login(this.usuario).subscribe((datos:any)=> {
       console.log(datos);
-      this.jwt.token=datos.token;
+      JWTService.token=datos.token;
       this.jwt.salvar()
       this.router.navigate(["lista"])
 

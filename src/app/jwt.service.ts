@@ -5,13 +5,13 @@ import { Injectable } from '@angular/core';
 })
 export class JWTService {
 
-  public token: string = ""
+  public static token: string = ""
   constructor() {
 
   }
   salvar() {
 
-    localStorage.setItem("token", this.token);
+    localStorage.setItem("token", JWTService.token);
   }
   obtener() {
     localStorage.getItem("token");
