@@ -1,3 +1,7 @@
+<mat-form-field>
+    <mat-label>Nombre:</mat-label>
+    <input matInput placeholder="introduce el nombre" name="nombre" [(ngModel)]="filtroNombre" (keyup)="hasPulsado($event)">
+</mat-form-field>
 <table id="mitabla">
     <tr *ngFor="let persona of personas"  >
 

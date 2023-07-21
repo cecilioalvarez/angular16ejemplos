@@ -14,5 +14,10 @@ export class PersonaRESTService extends GenericRESTService<Persona,keyof Persona
     super("personas","nombre",http);
 
    }
+
+   public buscarTodosPorNombre(nombre:string):Observable<Persona[]> {
+
+    return this.http.get<Persona[]>(`http://localhost:3000/personas?nombre=${nombre}`);
+   }
   
 }

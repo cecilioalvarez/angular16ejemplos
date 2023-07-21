@@ -20,6 +20,11 @@ personas.push({ nombre: "gema", apellidos: "sanchez", edad: 30 });
 personas.push({ nombre: "ana", apellidos: "blanco", edad: 20 });
 personas.push({ nombre: "antonio", apellidos: "perez", edad: 50 });
 
+personas.push({ nombre: "daniel", apellidos: "gomez", edad: 20 });
+personas.push({ nombre: "danilo", apellidos: "sanchez", edad: 30 });
+personas.push({ nombre: "ana", apellidos: "blanco", edad: 20 });
+personas.push({ nombre: "antonio", apellidos: "perez", edad: 50 });
+
 
 app.post("/login", function (req, res) {
 
@@ -43,10 +48,25 @@ app.post("/login", function (req, res) {
 
 
 
-
+// /personas
 app.get('/personas', (req, res) => {
-  res.send(personas);
+
+  if (req.query.nombre==null) {
+    res.send(personas);
+
+  }else {
+    let listaFiltrada=personas.filter(function(elemento) {
+
+      return elemento.nombre.startsWith(req.query.nombre);
+    });
+    res.send(listaFiltrada);
+  }
+ 
 });
+
+
+
+
 
 app.get("/personas/:nombre", function (req, res) {
 
